@@ -21,35 +21,44 @@
   </head>
   <body>
     <header>
-      header
+      <div class="nav-container">
+        <nav class="navbar">
+          <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+          </span>
+          <ul class="main-nav" id="js-menu">
+            <li>
+              <a href="#heroSection" class="nav-links">Home</a>
+            </li>
+            <li>
+              <a href="#" class="nav-links">Projects</a>
+            </li>
+            <li>
+              <a href="#" class="nav-links">About Me</a>
+            </li>
+            <li class="contact-nav">
+              <a href="https://github.com/WiFiCowboy" class="nav-links" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="mailto:hernandezhu1220@gmail.com" class="nav-links" target="_blank"><i class="fas fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/humberto-hernandez-12081b132/" class="nav-links" target="_blank"><i class="fab fa-linkedin"></i></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+        </nav>
+      </div>
     </header>
     <main>
-      main content
-      <div class="container">
-        container
-        <div class="content">
-          <section class="headline">
-            <h1>
-              Hello, My name is Humberto Hernandez. I’m a full-stack developer
-              and overall a problem-solving wizard!
-            </h1>
-          </section>
-          <section class="myImage">
-            <img
-              class="selfImage"
-              src="assets/selfImage.jpg"
-              alt="humberto"
-            />
-          </section>
-        </div>
-        <div class="content">
-          projects
-        </div>
-        <div class="content">
-          about me
-        </div>
-      </div>
+      <section id="heroSection">
+        <img   class="hero-image" src="assets/desert.jpg" alt="desert" scale="0">
+      </section>
+      <section>
+        Self Image and Headline
+      </section>
+      <section>
+        About me
+      </section>
     </main>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

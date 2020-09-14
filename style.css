@@ -1,3 +1,16 @@
+/* Navbar styles */
+
+nav button {
+  border: none;
+  outline: none;
+}
+
+nav button:focus,
+nav button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
 /* Navbar toggle animation */
 .icon-bar {
   width: 30px;

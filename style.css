@@ -1,5 +1,9 @@
-/* Navbar styles */
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
 
+/* Navbar styles */
 nav button {
   border: none;
   outline: none;
@@ -12,7 +16,6 @@ nav button:active {
 }
 
 /* Navbar toggle animation */
-/* animation bug , when first page render X is displayed instead of hamburger */
 .icon-bar {
   width: 30px;
   height: 4px;

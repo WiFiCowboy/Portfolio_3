@@ -1,7 +1,21 @@
 /* Smooth Scroll */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
+
+/* // If you use .navbar with .smooth-scroll, use this code to avoid overlapping navigation to a header. */
+
+/* #home::before,
+#portfolio::before,
+#aboutMe::before,
+#contact::before {
+  display: block;
+  content: " ";
+  margin-top: -35px;
+  height: 65px;
+  visibility: hidden;
+  scroll-behavior: smooth;
+} */
 
 /* Navbar styles */
 nav button {

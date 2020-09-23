@@ -1,22 +1,3 @@
-/* Smooth Scroll */
-/* html {
-  scroll-behavior: smooth;
-} */
-
-/* // If you use .navbar with .smooth-scroll, use this code to avoid overlapping navigation to a header. */
-
-/* #home::before,
-#portfolio::before,
-#aboutMe::before,
-#contact::before {
-  display: block;
-  content: " ";
-  margin-top: -35px;
-  height: 65px;
-  visibility: hidden;
-  scroll-behavior: smooth;
-} */
-
 /* Navbar styles */
 nav button {
   border: none;
@@ -68,4 +49,16 @@ nav button:active {
 
 .navbar-toggler.collapsed .bottom-bar {
   transform: rotate(0);
+}
+
+/* Scroll offset */
+#home {
+  padding-top: 300px;
+  margin-top: -300px;
+}
+
+#portfolio,
+#aboutMe {
+  padding-top: 250px;
+  margin-top: -250px;
 }

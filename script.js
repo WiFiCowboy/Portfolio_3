@@ -55,7 +55,8 @@ function insertProjectData() {
   PROJECTS.forEach((item) => {
     // item.key to get data
     $(".test-js").append(
-      `<div class="container col-lg">
+      `
+      <div class="container col-lg">
         <div class="card">
           <img
             class="card-img-top"
@@ -65,7 +66,7 @@ function insertProjectData() {
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">${item.description}</p>
-              <div
+            <div
               class="btn-group"
               role="group"
               aria-label="project-buttons"
@@ -83,30 +84,54 @@ function insertProjectData() {
               </button>
             </div>
           </div>
-          </div>
-          <hr />
         </div>
-    <div class="modal fade" id=${
-      item.id
-    } tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"     aria-hidden="true">
+        <hr />
+      </div>
+      <div class="modal fade" id=${
+        item.id
+      } tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"     aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">${item.title}</h5>
             <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ${item.title}
+            <div class="container-fluid">
+              <div class="row">
+                <p>${item.about}</p>
+              </div>
+              <br>
+              <div class="row">
+              <h5 class="modal-title" id="exampleModalLabel">Tech Stack</h5>
+                <div class="col-sm-3 col-example">
+                Level 1: .col-sm-3
+                
+                </div>
+                <div class="col-sm-3 col-example">
+                Level 1: .col-sm-3
+                
+                </div>
+                <div class="col-sm-3 col-example">
+                Level 1: .col-sm-3
+                
+                </div>
+                <div class="col-sm-3 col-example">
+                Level 1: .col-sm-3
+                
+                </div>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
-    </div>`
+      </div>
+      `
     );
   });
 }

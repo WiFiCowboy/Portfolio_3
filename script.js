@@ -1,5 +1,6 @@
 const PROJECTS = [
   {
+    id: "project1",
     title: "title 1",
     description: "desc 1",
     image: "./assets/logo.png",
@@ -7,6 +8,7 @@ const PROJECTS = [
     stack: ["html", "css", "javascript"],
   },
   {
+    id: "project2",
     title: "title 2",
     description: "desc 2",
     image: "./assets/logo.png",
@@ -14,6 +16,7 @@ const PROJECTS = [
     stack: ["html", "css", "javascript"],
   },
   {
+    id: "project3",
     title: "title 3",
     description: "desc 3",
     image: "./assets/logo.png",
@@ -21,6 +24,7 @@ const PROJECTS = [
     stack: ["html", "css", "javascript"],
   },
   {
+    id: "project4",
     title: "title 4",
     description: "desc 4",
     image: "./assets/logo.png",
@@ -52,33 +56,56 @@ function insertProjectData() {
     // item.key to get data
     $(".test-js").append(
       `<div class="container col-lg">
-      <div class="card">
-        <img
-          class="card-img-top"
-          src="${item.image}"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">${item.title}</h5>
-          <p class="card-text">${item.description}</p>
-          <div
-            class="btn-group"
-            role="group"
-            aria-label="project-buttons"
-          >
-            <button type="button" class="btn btn-secondary">
-              Demo
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="${item.image}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+            <p class="card-text">${item.description}</p>
+              <div
+              class="btn-group"
+              role="group"
+              aria-label="project-buttons"
+            >
+              <button type="button" class="btn btn-secondary">
+                Demo
+              </button>
+              <button type="button" class="btn btn-secondary">
+                Code
+              </button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal"   data-target=${
+                "#" + item.id
+              }>
+                About
+              </button>
+            </div>
+          </div>
+          </div>
+          <hr />
+        </div>
+    <div class="modal fade" id=${
+      item.id
+    } tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"     aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+              <span aria-hidden="true">&times;</span>
             </button>
-            <button type="button" class="btn btn-secondary">
-              Code
-            </button>
-            <button type="button" class="btn btn-secondary">
-              About
-            </button>
+          </div>
+          <div class="modal-body">
+            ${item.title}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
-      <hr />
     </div>`
     );
   });

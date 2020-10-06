@@ -5,7 +5,12 @@ const PROJECTS = [
     description: "desc 1",
     image: "./assets/logo.png",
     about: "about 1",
-    stack: ["html", "css", "javascript"],
+    stack: [
+      "devicon-html5-plain-wordmark",
+      "devicon-css3-plain-wordmark",
+      "devicon-javascript-plain",
+      "devicon-jquery-plain-wordmark",
+    ],
   },
   {
     id: "project2",
@@ -53,7 +58,6 @@ function insertProjectData() {
   // apppend the element
 
   PROJECTS.forEach((item) => {
-    // item.key to get data
     $(".test-js").append(
       `
       <div class="container col-lg">
@@ -106,21 +110,7 @@ function insertProjectData() {
               <br>
               <div class="row">
               <h5 class="modal-title" id="exampleModalLabel">Tech Stack</h5>
-                <div class="col-sm-3 col-example">
-                Level 1: .col-sm-3
-                
-                </div>
-                <div class="col-sm-3 col-example">
-                Level 1: .col-sm-3
-                
-                </div>
-                <div class="col-sm-3 col-example">
-                Level 1: .col-sm-3
-                
-                </div>
-                <div class="col-sm-3 col-example">
-                Level 1: .col-sm-3
-                
+                <div class="col-sm-3 col-example tech-stack-js">
                 </div>
               </div>
             </div>
@@ -136,9 +126,20 @@ function insertProjectData() {
   });
 }
 
+function displayTechStack() {
+  PROJECTS.forEach((item) => {
+    for (let i = 0; i < item.stack.length; i++) {
+      $(".tech-stack-js").append(`
+  <i class="${item.stack[i]} colored"></i>
+  `);
+    }
+  });
+}
+
 // Control for running app, call functions on start up
 function masterControl() {
   insertProjectData();
+  displayTechStack();
   // collapseNavBar();
 }
 

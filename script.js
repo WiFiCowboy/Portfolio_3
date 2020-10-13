@@ -18,7 +18,12 @@ const PROJECTS = [
     description: "desc 2",
     image: "./assets/logo.png",
     about: "about 2",
-    stack: ["html", "css", "javascript"],
+    stack: [
+      "devicon-nodejs-plain-wordmark",
+      "devicon-react-original-wordmark",
+      "devicon-express-original-wordmark",
+      "devicon-postgresql-plain-wordmark",
+    ],
   },
   {
     id: "project3",
@@ -26,7 +31,12 @@ const PROJECTS = [
     description: "desc 3",
     image: "./assets/logo.png",
     about: "about 3",
-    stack: ["html", "css", "javascript"],
+    stack: [
+      "devicon-html5-plain-wordmark",
+      "devicon-css3-plain-wordmark",
+      "devicon-javascript-plain",
+      "devicon-jquery-plain-wordmark",
+    ],
   },
   {
     id: "project4",
@@ -34,7 +44,12 @@ const PROJECTS = [
     description: "desc 4",
     image: "./assets/logo.png",
     about: "about 4",
-    stack: ["html", "css", "javascript"],
+    stack: [
+      "devicon-bootstrap-plain-wordmark",
+      "devicon-jquery-plain-wordmark",
+      "devicon-javascript-plain",
+      "devicon-html5-plain-wordmark",
+    ],
   },
 ];
 
@@ -111,6 +126,10 @@ function insertProjectData() {
               <div class="row">
               <h5 class="modal-title" id="exampleModalLabel">Tech Stack</h5>
                 <div class="col-sm-3 col-example tech-stack-js">
+                  <i class="${item.stack[0]} colored"></i>
+                  <i class="${item.stack[1]} colored"></i>
+                  <i class="${item.stack[2]} colored"></i>
+                  <i class="${item.stack[3]} colored"></i>
                 </div>
               </div>
             </div>
@@ -126,20 +145,18 @@ function insertProjectData() {
   });
 }
 
-function displayTechStack() {
-  PROJECTS.forEach((item) => {
-    for (let i = 0; i < item.stack.length; i++) {
-      $(".tech-stack-js").append(`
-  <i class="${item.stack[i]} colored"></i>
-  `);
-    }
-  });
-}
+// function displayTechStack(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     $(".tech-stack-js").append(`
+//         <i class="${arr[i]} colored"></i>
+//   `);
+//   }
+// }
 
 // Control for running app, call functions on start up
 function masterControl() {
   insertProjectData();
-  displayTechStack();
+  // displayTechStack();
   // collapseNavBar();
 }
 

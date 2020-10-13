@@ -70,7 +70,7 @@ function insertProjectData() {
   PROJECTS.forEach((item) => {
     $(".test-js").append(
       `
-      <div class="container col-lg">
+      <div class="container col-lg-5">
         <div class="card">
           <img
             class="card-img-top"

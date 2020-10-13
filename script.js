@@ -53,7 +53,6 @@ const PROJECTS = [
   },
 ];
 
-// bug need to fix , wont collapse
 // collapse navbar on click
 function collapseNavBar() {
   $(".navbar-nav>a").on("click", function () {
@@ -66,12 +65,8 @@ let scroll = new SmoothScroll('a[href*="#"]', {
   speed: 800,
 });
 
+// Projects component and modal
 function insertProjectData() {
-  // get the data
-  // loop through data
-  // build the element
-  // apppend the element
-
   PROJECTS.forEach((item) => {
     $(".test-js").append(
       `
@@ -145,6 +140,7 @@ function insertProjectData() {
   });
 }
 
+// helper function for DRY stack loop
 // function displayTechStack(arr) {
 //   for (let i = 0; i < arr.length; i++) {
 //     $(".tech-stack-js").append(`
@@ -155,9 +151,8 @@ function insertProjectData() {
 
 // Control for running app, call functions on start up
 function masterControl() {
+  collapseNavBar();
   insertProjectData();
-  // displayTechStack();
-  // collapseNavBar();
 }
 
 $(masterControl);

@@ -1,10 +1,13 @@
 const PROJECTS = [
   {
     id: "project1",
-    title: "title 1",
-    description: "desc 1",
-    image: "./assets/logo.png",
-    about: "about 1",
+    title: "The Matrix Quiz",
+    description:
+      "A multiple-choice quiz app to test your knowledge of The Matrix movie.",
+    image: "./assets/quizImg.png",
+    about: "",
+    demo: "https://wificowboy.github.io/Quiz-App/",
+    repo: "https://github.com/WiFiCowboy/Quiz-App",
     stack: [
       "devicon-html5-plain-wordmark",
       "devicon-css3-plain-wordmark",
@@ -14,10 +17,13 @@ const PROJECTS = [
   },
   {
     id: "project2",
-    title: "title 2",
-    description: "desc 2",
-    image: "./assets/logo.png",
-    about: "about 2",
+    title: "Tic-Tac-Toe CE",
+    description:
+      "Compete against other players' high scores in a game of tic-tac-toe against the computer.",
+    image: "./assets/tictactoe.png",
+    about: "",
+    demo: "https://tic-tac-toe-three.now.sh/",
+    repo: "https://github.com/WiFiCowboy/tic-tac-toe-client",
     stack: [
       "devicon-nodejs-plain-wordmark",
       "devicon-react-original-wordmark",
@@ -27,10 +33,13 @@ const PROJECTS = [
   },
   {
     id: "project3",
-    title: "title 3",
-    description: "desc 3",
-    image: "./assets/logo.png",
-    about: "about 3",
+    title: "Marvel Comics App",
+    description:
+      "An application to find your favorite marvel comics by date ranges.",
+    image: "./assets/comicApp.png",
+    about: "",
+    demo: "",
+    repo: "",
     stack: [
       "devicon-html5-plain-wordmark",
       "devicon-css3-plain-wordmark",
@@ -43,7 +52,9 @@ const PROJECTS = [
     title: "title 4",
     description: "desc 4",
     image: "./assets/logo.png",
-    about: "about 4",
+    about: "",
+    demo: "",
+    repo: "",
     stack: [
       "devicon-bootstrap-plain-wordmark",
       "devicon-jquery-plain-wordmark",
@@ -86,7 +97,7 @@ function insertProjectData() {
               aria-label="project-buttons"
             >
               <button type="button" class="btn btn-secondary">
-                Demo
+                <a href=${item.demo}>Demo</a>
               </button>
               <button type="button" class="btn btn-secondary">
                 Code
